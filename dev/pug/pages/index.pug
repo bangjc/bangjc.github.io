@@ -1,31 +1,37 @@
 extends ../layouts/base
 
 block variables
-    - pageLang = ""
-    - pageTitle = ""
-    - pageDescription = ""
-    - pageKeywords = ""
-    - pageUrl = ""
+  - pageLang = "en"
+  - pageTitle = "Home"
+  - pageDescription = "Page-specific description"
+  - pageKeywords = "Page-specific keywords"
+  - pageUrl = ""
 
 
 block body-content
+  // Header
+  +header
 
-    +page-header({
-        pageHeaderTitle: "Free HTML5 and CSS3 Website Templates"
-    })
+  // Home section
+  +home
 
+  // About section
+  +about
 
-    +page-content
-        block page-content-gallery
+  // Services section
+  +services
 
-            +gallery({
-                galleryItems: gallery
-            })
+  // Process section
+  +process
 
+  // Projects section
+  +projects
 
-    +page-footer({
-        pageFooterSiteOrganizationName: config.site.organizationName,
-        pageFooterSiteOrganizationLink: config.site.organizationLink,
-        pageFooterSiteAuthorName: config.site.authorName,
-        pageFooterSiteAuthorLink: config.site.authorLink
-    })
+  // Testimonials section
+  +testimonials
+
+  // Contacts section
+  +contacts
+
+  // Footer
+  +footer
